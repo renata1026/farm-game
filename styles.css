@@ -5,12 +5,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .bottle-container {
-  flex-direction: column;
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 80px;
   text-align: center;
+  margin-top: 50px;
 }
 
 .bottle-counter {
@@ -25,6 +27,12 @@ body {
   height: 50px;
   width: 50px;
   box-shadow: 0 2px 4px darkslategray;
+}
+
+.cash-counter {
+  position: absolute;
+  bottom: 500px; /* Adjust this value to position it vertically */
+  right: 100px; /* Adjust this value to position it horizontally */
 }
 
 .bounce {
