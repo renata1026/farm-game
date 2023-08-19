@@ -1,0 +1,94 @@
+body {
+  background: url('./images/house.png') fixed no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottle-container {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.bottle-counter {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  padding: 5px;
+  font-size: 31px;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 2px 4px darkslategray;
+}
+
+.bounce {
+  border: 2px solid black;
+  background-color: white;
+  padding: 10px;
+  font-family: 'Bangers', cursive;
+  color: red;
+  letter-spacing: 2px;
+  font-size: 50px;
+  display: inline-block;
+  animation: bounce 2s ease 2;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.moving-letters {
+  font-family: 'Bangers', cursive;
+  background-color: white;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  font-size: 24px;
+  animation: moveLetters 3s linear forwards;
+}
+
+@keyframes moveLetters {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.cow {
+  position: absolute;
+  bottom: 10%;
+  right: 5em;
+  animation: moveCow 3s linear forwards;
+}
+
+.cow img {
+  width: 200px;
+}
+
+.milk-icon {
+  width: 100px;
+}
+
+.instruction {
+  position: fixed;
+  bottom: 300px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
