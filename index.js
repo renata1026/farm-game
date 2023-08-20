@@ -28,7 +28,9 @@ const flexContainer = createElement(document.body, 'div', ['flex-container']);
 flexContainer.style.cssText =
   'display: flex; align-items: center; justify-content: center; gap:1em; margin-left:50px';
 
-const bottleContainer = createElement(body, 'div', ['bottle-container']);
+const hiringContainer = createElement(body, 'div', ['hiring-container']);
+hiringContainer.style.cssText =
+  'display:flex; align-items: center; justify-content: center; gap:1em; margin-left:50px';
 const bottleCounter = createElement(
   flexContainer,
   'p',
@@ -40,7 +42,7 @@ milkIcon.style.cssText = 'background-color:transparent; border:none';
 milkIcon.src = 'images/milk.png';
 
 const sellMilkButton = createElement(
-  bottleContainer,
+  body,
   'button',
   ['sell-milk'],
   'Sell Milk + $0.00'
@@ -48,7 +50,7 @@ const sellMilkButton = createElement(
 hideElement(sellMilkButton);
 
 const producerButtonA = createElement(
-  bottleContainer,
+  hiringContainer,
   'button',
   ['producer-btn-a'],
   '- $5 hire a worker'
@@ -56,7 +58,7 @@ const producerButtonA = createElement(
 hideElement(producerButtonA);
 
 const producerButtonB = createElement(
-  bottleContainer,
+  hiringContainer,
   'button',
   ['producer-btn-b'],
   '- $10 hire a cow'
@@ -66,8 +68,7 @@ hideElement(producerButtonB);
 const containerDiv = createElement(body, 'div', ['container']);
 containerDiv.style.cssText = 'position: relative;';
 const cashCounter = createElement(containerDiv, 'p', ['cash-counter'], '$0.00');
-cashCounter.style.cssText =
-  'position: absolute; top:0em; left: 0em; margin: 10px; z-index: 2;';
+cashCounter.style.cssText = 'position: absolute; margin: 10px; z-index: 2;';
 
 const piggyBank = createElement(containerDiv, 'img', ['piggy-bank']);
 piggyBank.style.cssText =
