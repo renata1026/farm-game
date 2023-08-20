@@ -63,7 +63,7 @@ const producerButtonB = createElement(
   hiringContainer,
   'button',
   ['producer-btn-b'],
-  '- $10 hire a cow'
+  '- $10 buy a cow'
 );
 hideElement(producerButtonB);
 // Create a container div for the cashCounter and piggyBank elements
