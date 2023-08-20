@@ -18,8 +18,9 @@ const body = document.querySelector('body');
 
 const cowButton = createElement(body, 'button', ['cow']);
 cowButton.style.cssText = 'background-color:transparent; border:none';
-const cowIcon = createElement(cowButton, 'img');
-cowIcon.src = 'images/cow.png';
+const cowImage = createElement(cowButton, 'img');
+cowImage.src = 'images/cow.png';
+cowImage.alt = 'A cow';
 
 // Get the cow sound audio element
 const cowSound = document.getElementById('cowSound');
@@ -37,9 +38,10 @@ const bottleCounter = createElement(
   ['bottle-counter'],
   '0'
 );
-const milkIcon = createElement(flexContainer, 'img', ['milk-icon']);
-milkIcon.style.cssText = 'background-color:transparent; border:none';
-milkIcon.src = 'images/milk.png';
+const cartonOfMilk = createElement(flexContainer, 'img', ['milk-icon']);
+cartonOfMilk.style.cssText = 'background-color:transparent; border:none';
+cartonOfMilk.src = 'images/milk.png';
+cartonOfMilk.alt = 'A carton of milk';
 
 const sellMilkButton = createElement(
   body,
@@ -73,15 +75,19 @@ cashCounter.style.cssText = 'position: absolute; margin: 10px; z-index: 2;';
 const piggyBank = createElement(containerDiv, 'img', ['piggy-bank']);
 piggyBank.style.cssText =
   'background-color:transparent; width:150px; border: none';
-// ('background-color: transparent;width:150px;border: none; position: fixed; bottom:30em;left:20em;z-index: 1;');
 piggyBank.src = 'images/piggybank.png';
+piggyBank.alt = 'A piggy bank';
 
 const producerContainer = createElement(body, 'div', ['producer-container']);
+producerContainer.style.cssText = 'display:flex;gap:2em';
 const people = createElement(body, 'p', ['people'], '+1 bottles/sec');
 hideElement(people);
-const personIcon = createElement(producerContainer, 'div', ['person']);
-createElement(personIcon, 'i', ['fa-solid', 'fa-person']);
+const personIcon = createElement(producerContainer, 'div', ['person-icon']);
+createElement(personIcon, 'i', ['fa-solid', 'fa-person', 'fa-2x']);
 hideElement(personIcon);
+const cowIcon = createElement(producerContainer, 'div', ['cow-icon']);
+createElement(cowIcon, 'i', ['fa-solid', 'fa-cow', 'fa-2x']);
+hideElement(cowIcon);
 
 let bottleCount = 0;
 let milkSellAmount = 0;
@@ -120,6 +126,8 @@ const buyProducer = (index) => {
     if (index === 0) {
       toggleButton(people, true);
       toggleButton(personIcon, true);
+    } else {
+      toggleButton(cowIcon, true);
     }
 
     const milkProductionInterval = setInterval(() => {

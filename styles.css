@@ -26,9 +26,9 @@ p {
   border-radius: 50%;
   border: none;
   padding: 5px;
-  font-size: 31px;
-  height: 50px;
-  width: 50px;
+  font-size: 22px;
+  height: 100px;
+  width: 100px;
   box-shadow: 0 2px 4px darkslategray;
 }
 
