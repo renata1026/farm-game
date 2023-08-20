@@ -58,7 +58,7 @@ p {
   padding: 10px;
   position: absolute;
   left: 1em;
-  bottom: 1em;
+  bottom: 0;
   font-size: 24px;
   animation: moveLetters 3s linear forwards;
 }
@@ -136,4 +136,35 @@ p {
 .producer-btn-a:hover,
 .producer-btn-b:hover {
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .producer-container,
+  .people {
+    margin-left: 15em;
+  }
+
+  .instruction {
+    visibility: hidden;
+  }
+  .pig-icon {
+    margin-bottom: 20px;
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .sell-milk {
+    position: relative;
+    z-index: 10;
+  }
 }
