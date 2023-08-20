@@ -23,15 +23,19 @@ cowIcon.src = 'images/cow.png';
 
 // Get the cow sound audio element
 const cowSound = document.getElementById('cowSound');
+// Create a flex container for the cash counter and milk bottle
+const flexContainer = createElement(document.body, 'div', ['flex-container']);
+flexContainer.style.cssText =
+  'display: flex; align-items: center; justify-content: center; gap:1em; margin-left:50px';
 
 const bottleContainer = createElement(body, 'div', ['bottle-container']);
 const bottleCounter = createElement(
-  bottleContainer,
+  flexContainer,
   'p',
   ['bottle-counter'],
   '0'
 );
-const milkIcon = createElement(bottleContainer, 'img', ['milk-icon']);
+const milkIcon = createElement(flexContainer, 'img', ['milk-icon']);
 milkIcon.style.cssText = 'background-color:transparent; border:none';
 milkIcon.src = 'images/milk.png';
 
@@ -58,8 +62,19 @@ const producerButtonB = createElement(
   '- $10 hire a cow'
 );
 hideElement(producerButtonB);
+// Create a container div for the cashCounter and piggyBank elements
+const containerDiv = createElement(body, 'div', ['container']);
+containerDiv.style.cssText = 'position: relative;';
+const cashCounter = createElement(containerDiv, 'p', ['cash-counter'], '$0.00');
+cashCounter.style.cssText =
+  'position: absolute; top:0em; left: 0em; margin: 10px; z-index: 2;';
 
-const cashCounter = createElement(body, 'p', ['cash-counter'], '$0.00');
+const piggyBank = createElement(containerDiv, 'img', ['piggy-bank']);
+piggyBank.style.cssText =
+  'background-color:transparent; width:150px; border: none';
+// ('background-color: transparent;width:150px;border: none; position: fixed; bottom:30em;left:20em;z-index: 1;');
+piggyBank.src = 'images/piggybank.png';
+
 const producerContainer = createElement(body, 'div', ['producer-container']);
 const people = createElement(body, 'p', ['people'], '+1 bottles/sec');
 hideElement(people);
